@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch Page | Kinilau Fonohema</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to your custom stylesheet -->
+  <link rel="stylesheet" href="scratch.css">
+</head>
+<body>
+
+  <div id="top" class="page-container">
+
+    <header class="header">
+      <h1>Football, Data, and Random Fun</h1>
+      <p>This is my from-scratch page to show pure HTML, CSS, and some embeds.</p>
+      <nav>
+        <a href="index.html">Back to Professional Site</a> |
+        <a href="#lists">Lists</a> |
+        <a href="#video">Video</a> |
+        <a href="#tableau">Tableau Viz</a> |
+        <a href="#app-link">Web App</a>
+      </nav>
+    </header>
+
+    <!-- At least three divs used for layout -->
+    <div class="content-row">
+      <div class="content-block">
+        <h2 id="lists">Workout Structure (Lists Example)</h2>
+        <p>Here is an ordered list with an unordered list embedded inside it.</p>
+        <ol>
+          <li>Warm Up
+            <ul>
+              <li>Dynamic stretching</li>
+              <li>Light jog</li>
+              <li>Mobility work</li>
+            </ul>
+          </li>
+          <li>Main Lift
+            <ul>
+              <li>Squats</li>
+              <li>Bench press</li>
+              <li>Deadlift</li>
+            </ul>
+          </li>
+          <li>Cool Down
+            <ul>
+              <li>Walk and breathe</li>
+              <li>Static stretching</li>
+            </ul>
+          </li>
+        </ol>
+        <p><a href="#top">Back to top (on-page anchor)</a></p>
+      </div>
+
+      <div class="content-block">
+        <h2>Favorite Game Snapshot</h2>
+        <p>Here is an image that is not from the Bootstrap theme.</p>
+        <img
+          src="https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg"
+          alt="Football field"
+          class="showcase-image"
+        >
+      </div>
+    </div>
+
+    <div class="content-row">
+      <div class="content-block" id="video">
+        <h2>Embedded YouTube Video</h2>
+        <p>Here is a YouTube embed about football highlights.</p>
+        <!-- Replace the src with any YouTube video you prefer -->
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="content-block" id="tableau">
+        <h2>Interactive Tableau Visualization</h2>
+        <p>
+          This is an embedded Tableau graph. Replace the placeholder URL with a real Tableau Public viz.
+        </p>
+        <div class="tableauPlaceholder" id="viz1680000000000" style="position: relative">
+          <noscript>
+            <a href="#">
+              <img alt="Tableau Placeholder"
+                   src="https://public.tableau.com/static/images/Ph/Placeholder/1_rss.png"
+                   style="border: none" />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="site_root" value=""/>
+            <!-- Replace the 'name' value below with a real workbook/view -->
+            <param name="name" value="Placeholder/Sheet1"/>
+            <param name="tabs" value="no"/>
+            <param name="toolbar" value="yes"/>
+            <param name="static_image" value="https://public.tableau.com/static/images/Ph/Placeholder/1.png"/>
+            <param name="animate_transition" value="yes"/>
+            <param name="display_static_image" value="yes"/>
+            <param name="display_spinner" value="yes"/>
+            <param name="display_overlay" value="yes"/>
+            <param name="display_count" value="yes"/>
+          </object>
+        </div>
+        <script type="text/javascript">
+          var divElement = document.getElementById('viz1680000000000');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width = '100%';
+          vizElement.style.height = '500px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+    </div>
+
+    <div class="content-row" id="app-link">
+      <div class="content-block">
+        <h2>Small Web App</h2>
+        <p>
+          I created a simple web app with the help of AI. You can try it here:
+        </p>
+        <p><a href="app.html">Open the Riddle Generator App</a></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Scratch page by Kinilau Fonohema</p>
+      <p><a href="index.html">Back to Professional Site</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>

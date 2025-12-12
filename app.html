@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riddle Generator App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    #riddle, #answer {
+      margin: 15px 0;
+      font-size: 1.05rem;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #newRiddleBtn {
+      background-color: #1565c0;
+      color: white;
+    }
+    #showAnswerBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #1565c0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Riddle Generator</h1>
+    <p>Click the button to get a random riddle, then see if you can guess the answer.</p>
+
+    <div id="riddle"><em>Press "New Riddle" to start.</em></div>
+    <div id="answer" style="visibility: hidden;"></div>
+
+    <button id="newRiddleBtn">New Riddle</button>
+    <button id="showAnswerBtn">Show Answer</button>
+
+    <p><a href="scratch.html">Back to Scratch Page</a></p>
+  </div>
+
+  <script>
+    const riddles = [
+      {
+        question: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+        answer: "An echo."
+      },
+      {
+        question: "What has to be broken before you can use it?",
+        answer: "An egg."
+      },
+      {
+        question: "I am not alive, but I can grow. I do not have lungs, but I need air. What am I?",
+        answer: "Fire."
+      },
+      {
+        question: "What gets wetter the more it dries?",
+        answer: "A towel."
+      },
+      {
+        question: "I have keys but no locks, space but no rooms. You can enter, but you cannot go outside. What am I?",
+        answer: "A keyboard."
+      }
+    ];
+
+    const riddleDiv = document.getElementById("riddle");
+    const answerDiv = document.getElementById("answer");
+    const newRiddleBtn = document.getElementById("newRiddleBtn");
+    const showAnswerBtn = document.getElementById("showAnswerBtn");
+
+    let currentIndex = -1;
+
+    function getRandomRiddleIndex() {
+      let newIndex = Math.floor(Math.random() * riddles.length);
+      // avoid repeating the exact same riddle twice in a row
+      if (newIndex === currentIndex && riddles.length > 1) {
+        newIndex = (newIndex + 1) % riddles.length;
+      }
+      return newIndex;
+    }
+
+    newRiddleBtn.addEventListener("click", () => {
+      currentIndex = getRandomRiddleIndex();
+      const riddle = riddles[currentIndex];
+      riddleDiv.textContent = riddle.question;
+      answerDiv.textContent = " ";
+      answerDiv.style.visibility = "hidden";
+    });
+
+    showAnswerBtn.addEventListener("click", () => {
+      if (currentIndex === -1) {
+        answerDiv.textContent = "Get a riddle first.";
+      } else {
+        answerDiv.textContent = riddles[currentIndex].answer;
+      }
+      answerDiv.style.visibility = "visible";
+    });
+  </script>
+</body>
+</html>
