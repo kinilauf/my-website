@@ -83,42 +83,59 @@
       <div class="content-block" id="tableau">
         <h2>Interactive Tableau Visualization</h2>
         <p>
-          This is an embedded Tableau graph. Replace the placeholder URL with a real Tableau Public viz.
+          This is an embedded Tableau graph.
         </p>
-        <div class="tableauPlaceholder" id="viz1680000000000" style="position: relative">
-          <noscript>
-            <a href="#">
-              <img alt="Tableau Placeholder"
-                   src="https://public.tableau.com/static/images/Ph/Placeholder/1_rss.png"
-                   style="border: none" />
-            </a>
-          </noscript>
-          <object class="tableauViz" style="display:none;">
-            <param name="host_url" value="https://public.tableau.com/"/>
-            <param name="embed_code_version" value="3"/>
-            <param name="site_root" value=""/>
-            <!-- Replace the 'name' value below with a real workbook/view -->
-            <param name="name" value="Placeholder/Sheet1"/>
-            <param name="tabs" value="no"/>
-            <param name="toolbar" value="yes"/>
-            <param name="static_image" value="https://public.tableau.com/static/images/Ph/Placeholder/1.png"/>
-            <param name="animate_transition" value="yes"/>
-            <param name="display_static_image" value="yes"/>
-            <param name="display_spinner" value="yes"/>
-            <param name="display_overlay" value="yes"/>
-            <param name="display_count" value="yes"/>
-          </object>
-        </div>
-        <script type="text/javascript">
-          var divElement = document.getElementById('viz1680000000000');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          vizElement.style.width = '100%';
-          vizElement.style.height = '500px';
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </div>
+        <div class="content-block" id="tableau">
+  <h2>Interactive Tableau Visualization</h2>
+  <p>This dashboard visualizes NFL team performance.</p>
+
+  <div class='tableauPlaceholder' id='viz1765680539718' style='position: relative'>
+    <noscript>
+      <a href='#'>
+        <img alt=' ' src='https://public.tableau.com/static/images/NF/NFLTeamPerformance_15750833320150/NFLTeamPerfDash_/1_rss.png' style='border: none' />
+      </a>
+    </noscript>
+
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='NFLTeamPerformance_15750833320150/NFLTeamPerfDash_' />
+      <param name='tabs' value='yes' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https://public.tableau.com/static/images/NF/NFLTeamPerformance_15750833320150/NFLTeamPerfDash_/1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+    </object>
+  </div>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1765680539718');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+
+    if (divElement.offsetWidth > 800) {
+      vizElement.style.width='100%';
+      vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+    } else if (divElement.offsetWidth > 500) {
+      vizElement.style.width='100%';
+      vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+    } else {
+      vizElement.style.width='100%';
+      vizElement.style.minHeight='1050px';
+      vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
+    }
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
+</div>
+
     </div>
 
     <div class="content-row" id="app-link">
